@@ -1,0 +1,315 @@
+.productui {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 10px;
+    background-color: white;
+}
+
+.productui .filter {
+
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid {
+    display: flex;
+    /* or grid if preferred */
+    gap: 20px;
+}
+
+.grid div {
+    position: relative;
+    cursor: pointer;
+}
+
+.grid div::after {
+    content: "";
+    position: absolute;
+    background-color: rgb(169, 169, 169);
+    height: 3px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.grid div.active::after {
+    transform: scaleX(1);
+}
+
+
+.productui .boxes {
+    display: flex;
+    gap: 17px;
+    align-items: center;
+}
+
+.productui .box select {
+    cursor: pointer;
+    text-align: center;
+    padding: 5px 0px;
+    width: 200px;
+    outline: none;
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+
+}
+
+.box option {
+    cursor: pointer;
+    color: #777;
+    line-height: 100px;
+    text-transform: capitalize;
+}
+
+.filter .grid {
+
+    cursor: pointer;
+    display: flex;
+    gap: 6px;
+    font-size: 22px;
+}
+
+
+hr {
+    height: 4px;
+    background-color: #777;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: var(--grid-columns, repeat(4, 1fr));
+    grid-gap: 20px;
+}
+
+.gridlayout1 {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.gridlayout2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.gridlayout3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.gridlayout4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.cards img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.cards .img {
+    width: 100%;
+    height: 100%;
+}
+
+.cards .card a {
+    text-decoration: none;
+}
+
+.cards .card {
+    outline: none;
+    flex-direction: column;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    box-shadow: 1px 1px 5px #00000054;
+    background-color: #f8f9fa;
+    border-radius: 15px;
+}
+
+.cards .card .btn1 {
+    outline: none;
+    border: none;
+}
+
+.cards .card .img .btn1 {
+    position: relative;
+}
+
+.cards .card .NewIn {
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    right: 10px;
+    bottom: 7px;
+    position: absolute;
+    font-size: 11px;
+    background-color: red;
+    color: white;
+    padding: 6px 3px;
+
+    border-radius: 50px;
+}
+
+.cards .body {
+    position: relative;
+    padding: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+}
+
+.cards .heart {
+    position: absolute;
+    right: 10px;
+    top: 4px;
+    font-size: 25px;
+}
+
+.cards .body .btn1 {
+    outline: none;
+    border: none;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    cursor: pointer;
+}
+
+.cards .body .btn1 h1 {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 15px;
+    color: rgb(33, 37, 41);
+}
+
+.cards .body h1 svg {
+    font-size: 25px;
+    color: red;
+}
+
+
+.body p {
+    text-transform: capitalize;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: rgb(137, 137, 137);
+    text-align: start;
+}
+
+.body .price {
+    font-size: 14px;
+    color: black;
+    font-weight: 600;
+}
+
+.body span {
+    color: red;
+    font-weight: 600;
+}
+
+.body .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    text-transform: capitalize;
+}
+
+.body .btn svg {
+    font-size: 20px;
+}
+
+
+
+
+
+
+@media only screen and (max-width: 985px) {
+    .cards {
+        display: grid;
+        grid-template-columns: var(--grid-columns, repeat(3, 1fr));
+
+    }
+
+    .gridlayout1 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .gridlayout2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gridlayout3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid img:nth-child(4) {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 712px) {
+    .cards {
+        display: grid;
+        grid-template-columns: var(--grid-columns, repeat(2, 1fr));
+
+    }
+
+    .gridlayout1 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .gridlayout2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+
+    .grid img:nth-child(3) {
+        display: none;
+    }
+
+
+}
+
+@media only screen and (max-width: 490px) {
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr) !important;
+
+    }
+
+
+
+    .productui .boxes {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .grid img {
+        display: none;
+    }
+
+}

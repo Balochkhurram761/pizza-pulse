@@ -1,0 +1,120 @@
+.colr {
+    background-color: white;
+}
+
+.container {
+    width: 50%;
+    margin: 0 auto;
+
+}
+
+.herosection {
+    padding: 25px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.herosection h1 {
+    text-align: center;
+    font-family: Bebas Neue, sans-serif;
+    font-weight: 500;
+    font-size: 4vw;
+}
+
+.herosection h1 span {
+    color: red;
+    font-family: 800;
+}
+
+.herosection p {
+    text-align: center;
+    font-size: 1.3vw;
+}
+
+.herosection a {
+    margin-top: 20px;
+    border: 2px solid red;
+    padding: 8px 10px;
+    font-size: 1.2vw;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: red;
+    font-weight: 700;
+    transition: all 0.2s ease-in-out;
+}
+
+.herosection a:hover {
+    background-color: red;
+    color: white;
+
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 790px) {
+    .herosection h1 {
+
+        font-size: 4vw;
+    }
+
+    .herosection p {
+
+        font-size: 1.6vw;
+    }
+
+    .herosection a {
+        margin-top: 20px;
+        font-size: 1.6vw;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 638px) {
+    .container {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .herosection h1 {
+
+        font-size: 5vw;
+    }
+
+    .herosection p {
+
+        font-size: 2.2vw;
+    }
+
+    .herosection a {
+        margin-top: 20px;
+        font-size: 2vw;
+
+    }
+
+
+}
+
+@media only screen and (max-width: 500px) {
+    .herosection h1 {
+
+        font-size: 6vw;
+    }
+
+    .herosection p {
+
+        font-size: 2.8vw;
+    }
+
+    .herosection a {
+        margin-top: 20px;
+        font-size: 2.5vw;
+
+
+    }
+}

@@ -1,0 +1,72 @@
+.herosection {
+    background-color: white;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+
+}
+
+.herosection .card {
+    position: relative;
+}
+
+.herosection img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.herosection .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    padding: 20px;
+    background: linear-gradient(#bf8f00 5%, rgba(6, 6, 12, .9) 10%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, .454) 15%, rgba(0, 0, 0, .763) 52%);
+    text-align: center;
+    color: white;
+}
+
+.herosection .body {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    color: white;
+    text-transform: uppercase;
+    font-size: 1.1vw;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.herosection .body:hover {
+    transform: translateY(-3px);
+}
+
+@media only screen and (max-width: 772px) {
+    .herosection {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .herosection .body {
+
+        font-size: 1.8vw;
+
+
+    }
+}
+
+@media only screen and (max-width: 517px) {
+    .herosection {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .herosection .body {
+
+        font-size: 3vw;
+    }
+}
