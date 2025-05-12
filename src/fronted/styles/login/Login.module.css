@@ -3,7 +3,7 @@
     font-family: "Roboto", sans-serif;
     background-color: white;
     position: absolute;
-    top: 67px;
+    top: 94px;
     width: 350px;
     right: 0;
     z-index: 3;
@@ -128,7 +128,12 @@
 
 
 
+@media only screen and (max-width: 975px) {
+    .login {
 
+        top: 67px;
+    }
+}
 
 @media only screen and (max-width: 398px) {
     .login {
