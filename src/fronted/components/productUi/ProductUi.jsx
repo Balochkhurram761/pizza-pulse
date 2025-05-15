@@ -5,6 +5,8 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import { CiHeart } from "react-icons/ci";
 import Loader from "../loader/Loader";
 import ProductUIDesc from "../productUiDesc/ProductUIDesc";
+import { IoMdArrowDropdown } from "react-icons/io";
+
 
 
 const ProductUi = () => {
@@ -12,7 +14,7 @@ const ProductUi = () => {
 
   const [Isopen, setIsopen] = useState(false);
   const handlebtn = (item) => {
-    setIsopen(!Isopen);
+
     setSelectedPizza(item);
   }
   const [active, setactive] = useState('img4')
@@ -21,9 +23,13 @@ const ProductUi = () => {
     setgridlayout(col)
 
   }
+  const handledrop = () => {
+    setdropdown(!dropdown)
+  }
   const [selectedCategory, setSelectedCategory] = useState("All Pizza");
   const [gridlayout, setgridlayout] = useState(4);
   const [IsLoading, setIsLoading] = useState(true)
+  const [dropdown, setdropdown] = useState(false)
 
   const filteredPizzas = pizza.filter((item) => {
     if (selectedCategory === item.collection || selectedCategory === 'All Pizza') return true;
@@ -48,18 +54,23 @@ const ProductUi = () => {
           <div className={styles.productui}>
             <div className={styles.filter}>
               <div className={styles.boxes}>
-                <div className={styles.box}>
-                  <select
-                    value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
-                  >
-                    <option value="All Pizza">All Pizza</option>
-                    <option value="classic flavors">Clasic Flavors</option>
-                    <option value="favorite flavors">Favorite Flavors</option>
-                    <option value="Premium Flavors">Premium Flavors</option>
-                    <option value="Super Loaded Pizza">Super Loaded Pizza</option>
-                  </select>
+                <div className={styles.box1}>
+                  <div className={styles.bo} onClick={handledrop} onChange={(e) => setSelectedCategory(e.target.value)}>
+                    <p>{selectedCategory}</p><IoMdArrowDropdown />
+                  </div>
+                  {dropdown && (
+                    <div className={styles.dropdown}>
+                      <p onClick={() => { setSelectedCategory("All Pizza"); setdropdown(false); }}>All Pizza</p>
+                      <p onClick={() => { setSelectedCategory("classic flavors"); setdropdown(false); }}>Classic Flavors</p>
+                      <p onClick={() => { setSelectedCategory("favorite flavors"); setdropdown(false); }}>Favorite Flavors</p>
+                      <p onClick={() => { setSelectedCategory("Premium Flavors"); setdropdown(false); }}>Premium Flavors</p>
+                      <p onClick={() => { setSelectedCategory("super Loaded Pizza"); setdropdown(false); }}>Super Loaded Pizza</p>
+                    </div>
+
+                  )}
+
                 </div>
+
                 <div className={styles.totalpro}>
                   {filteredPizzas.length} products
                 </div>

@@ -49,23 +49,46 @@
     align-items: center;
 }
 
-.productui .box select {
-    cursor: pointer;
-    text-align: center;
-    padding: 5px 0px;
+.productui .box1 {
+    position: relative;
     width: 200px;
-    outline: none;
-    color: rgb(51, 51, 51);
-    font-size: 16px;
+    padding: 5px 10px;
+    border: 1px solid black;
 
-}
-
-.box option {
     cursor: pointer;
-    color: #777;
-    line-height: 100px;
-    text-transform: capitalize;
+
+
+
 }
+
+.productui .bo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.productui .box1 p {
+    text-align: center;
+}
+
+
+.productui .dropdown {
+    text-align: center;
+    line-height: 35px;
+    width: 100%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    background-color: white;
+    top: 31px;
+    left: 0px;
+    position: absolute;
+    z-index: 99;
+}
+
+.productui .dropdown p:hover {
+    background-color: #F2F2F2;
+}
+
+
 
 .filter .grid {
 
@@ -158,11 +181,12 @@ hr {
 
 .cards .body {
     position: relative;
-    padding: 7px;
+
+    /* padding: 7px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 7px;
+    gap: 7px; */
 }
 
 .cards .heart {
@@ -181,6 +205,8 @@ hr {
     align-items: flex-start;
     gap: 7px;
     cursor: pointer;
+    width: 100%;
+    padding: 10px;
 }
 
 .cards .body .btn1 h1 {

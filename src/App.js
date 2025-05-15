@@ -7,6 +7,7 @@ import AboutUs from './fronted/pages/about/AboutUs';
 import ProductUi from './fronted/components/productUi/ProductUi';
 import Loader from './fronted/components/loader/Loader';
 import ProductUIDesc from './fronted/components/productUiDesc/ProductUIDesc';
+import Dashboard from './Dashboard/Componets/Dashboard/Dashboard';
 
 
 const App = () => {
@@ -31,6 +32,8 @@ const App = () => {
             <Route path="/menu" element={<ProductUi />} />
             <Route path="/menu/:id" element={<ProductUIDesc />} />
             <Route path="/about" element={<AboutUs />} />
+            <Route path="/dash" element={<Dashboard />} />
+
           </Routes>
           <Footer />
         </>

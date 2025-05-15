@@ -30,9 +30,9 @@ export const NavbarMobile = ({ menubar, onclose }) => {
                 <ul>
                     <li><Link to="/" onClick={onclose} >Home</Link></li>
                     <hr />
-                    <li><a href="" onClick={onclose} >Menu</a></li>
+                    <li><Link to="/menu" onClick={onclose} >Menu</Link></li>
                     <hr />
-                    <li><a href="" onClick={onclose} >About Us</a></li>
+                    <li><Link to="/about" onClick={onclose} >About Us</Link></li>
                     <hr />
                     <li><a href="" onClick={onclose} >Gallery</a></li>
                     <hr />
