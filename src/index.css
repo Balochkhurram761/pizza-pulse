@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   padding: 0px;
   margin: 0px;
@@ -77,4 +81,13 @@ body {
 
   }
 
+}
+
+header .logowrapper {
+  width: 80px;
+
+}
+
+header .logowrapper img {
+  border-radius: 50%;
 }

@@ -16,6 +16,7 @@ const ProductUi = () => {
   const handlebtn = (item) => {
 
     setSelectedPizza(item);
+    setIsopen(true);
   }
   const [active, setactive] = useState('img4')
   const handleactive = (page, col) => {
@@ -93,7 +94,14 @@ const ProductUi = () => {
             </div>
             {/* <hr /> */}
             <div className={`${styles.cards} ${styles[`gridlayout${gridlayout}`]} `} >
-              {filteredPizzas.map((item, index) => (
+             
+             
+
+                {filteredPizzas.length >0 ? (
+
+
+      
+              filteredPizzas.map((item, index) => (
 
                 <div key={index} className={styles.card}>
                   <button className={styles.btn1} onClick={() => handlebtn(item)}>
@@ -130,12 +138,15 @@ const ProductUi = () => {
 
                 </div>
 
-
-
-              ))}
+ 
+              ))
+             ):(
+              <div className={styles.noproduct}>no product found</div>
+             )} 
+   
+          
             </div>
-
-          </div >
+        </div >
         )}
 
       <ProductUIDesc

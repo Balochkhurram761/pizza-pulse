@@ -75,7 +75,7 @@ const Login = ({ usermenu, setUsermenu }) => {
 
             if (response.data.success) {
                 toast.success("login succesfully")
-                naviage("/dash")
+                naviage("/dashboard")
             } else {
 
                 toast.error(response.data.message || "Invalid credentials");
