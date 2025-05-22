@@ -3,7 +3,6 @@ import Dialog from '@mui/material/Dialog';
 import styles from '../../styles/productUiDesc/ProductUiDesc.module.css'
 import { IoMdClose } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
-import { style } from '@mui/system';
 
 const ProductUIDesc = ({ Isopen, close, pizza }) => {
  const [selections, setSelections] = useState({
@@ -21,8 +20,9 @@ const ProductUIDesc = ({ Isopen, close, pizza }) => {
       [...prev.optional , value ]
       return  {...prev, optional:handleOptional}
     }
-   return  {...prev , [key]:value}
-   })
+    return { ...prev, [key]: prev[key] === value ? "" : value };
+
+  })
   
   };
 
@@ -89,7 +89,7 @@ const ProductUIDesc = ({ Isopen, close, pizza }) => {
                     <div className={styles.image1}>
                       <img src={item.image} alt="Pan Crust" />
                     </div>
-                    <input type="radio"  checked={selections.crust===item.title} name="crust" className={styles.radio} />
+                    <input type="radio"  checked={selections.crust===item.title} name="crust" className={styles.radio} onClick={()=>handleToggle("crust", item.title)} />
                     <div className={styles.bdp}>
                       <div className={styles.bdpizza}>
                         <h5>{item.title}</h5>
