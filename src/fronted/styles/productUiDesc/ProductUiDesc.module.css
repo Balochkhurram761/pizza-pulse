@@ -32,7 +32,7 @@
 
 .dialong .container {
     margin: 10px 0px;
-    padding: 20px 10px;
+    padding: 10px 10px;
 }
 
 .dialong .body {
@@ -48,6 +48,7 @@
 
 .dialong .body h1 {
     font-size: 18px;
+    font-weight: 600;
 }
 
 .dialong .body p {
@@ -99,7 +100,7 @@
 }
 
 .dialong .pizzacard .sizepizza {
-    border: 1px solid black;
+  
     display: flex;
     gap: 10px;
     flex-direction: column;
@@ -107,8 +108,13 @@
     justify-content: center;
     border-radius: 10px;
     padding: 10px 0px;
+    cursor: pointer;
 }
-
+.sizepizza.selectshow{
+      border: 1px solid black;
+      border-radius: 10px;
+      cursor: pointer;
+}
 .dialong .pizzacard .sizepizza img {
     width: 100%;
     height: 100%;
@@ -117,6 +123,17 @@
 
 .dialong .pizzacard .sizepizza .img {
     width: 50px;
+}
+.sizepizza1 .box{
+    position: absolute;
+    right:10px;
+    border-radius: 20px;
+    z-index: 999;
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    background-color: transparent;
+    
 }
 
 .dialong .sizepizza .bdpizza {
@@ -146,15 +163,16 @@
     border-radius: 20px;
 }
 
-.dialong .size .pizzacard1 .image1 {
+.dialong .size  .image1 {
     border-radius: 0;
     height: 100%;
     margin: 0;
     padding-right: 30%;
     width: 100%;
+
 }
 
-.dialong .size .pizzacard1 .bdp {
+.dialong .size  .bdp {
     display: flex;
     border-radius: 20px;
     align-items: center;
@@ -173,7 +191,7 @@
 }
 
 
-.dialong .size .pizzacard1 .bdp::after {
+.dialong .size  .bdp::after {
     border-radius: 20px;
     background: linear-gradient(90deg, #00f4fe00 52%, #92918f 60%);
     content: "";
@@ -185,7 +203,22 @@
     width: 100%;
     z-index: -1;
 }
+.sizepizza1.selectionbox .bdp::after{
+    border-radius: 20px;
+    background: linear-gradient(90deg, #00f4fe00 52%, red 60%);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0px;
+    transition: all .3s ease-in-out;
+    width: 100%;
+    z-index: -1;
+}
 
+.box.boxselected{
+    background-color: white;
+}
 .dialong .size .pizzacard1 .bdp .bdpizza {
     display: flex;
     flex-direction: column;
@@ -221,9 +254,90 @@
     height: 20px;
     color: white;
     background: linear-gradient(90deg, #00f4fe00 52%, #92918f 60%);
+    display: none;
 
 }
 
+
+.size .bdy{
+   
+    margin-top: 20px;
+    background-color: #92918f;
+    padding: 12px 20px;
+    border-radius: 20px;
+    display: block;
+
+}
+.size .rates{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    cursor: pointer;
+   
+}
+.size  .boxes{
+    gap: 10px;
+    display: flex;
+   background-color: white;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius:30px;
+    gap: 20px;
+    cursor: pointer;
+}
+.size .box{
+    display: flex;
+    gap: 20px;
+}
+.size .boxes  input[type="radio"]{
+ display: none;
+ 
+}
+.size .boxes .select{
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.size .boxes1.optionselection .select{
+  background-color: black;
+  cursor: pointer;
+}
+.dialong .instruction{
+    border: 1px solid black;
+    color: black;
+   margin: 20px 20px;
+   
+   border-radius: 20px;
+   margin-bottom:80px;
+   
+}
+.dialong .instruction h1{
+    padding: 10px 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+   justify-content: space-between;
+   cursor: pointer;
+}
+
+.dialong .instruction h1 svg {
+    font-size: 18px;
+}
+.dialong .instruction hr{
+height: 2px;
+color: black;
+}
+.dialong .instruction .textarea{
+   width:90%;
+    height: 70px;
+   border-radius: 20px;
+   padding: 10px;
+    border: 1px  solid #786;
+    margin: 10px 20px;
+}
 .dialong .addtocart {
     display: flex;
     justify-content: space-between;
@@ -248,7 +362,6 @@
     display: flex;
     gap: 10px;
     align-items: center;
-
 }
 
 .dialong .addtocart .btn button {
@@ -276,3 +389,4 @@
     padding: 10px 20px;
     cursor: pointer;
 }
+
