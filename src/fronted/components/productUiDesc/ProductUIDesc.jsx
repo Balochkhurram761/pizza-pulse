@@ -1,4 +1,4 @@
-import React, { use, useState } from 'react'
+import React, {  useState } from 'react'
 import Dialog from '@mui/material/Dialog';
 import styles from '../../styles/productUiDesc/ProductUiDesc.module.css'
 import { IoMdClose } from "react-icons/io";
@@ -137,7 +137,7 @@ const ProductUIDesc = ({ Isopen, close, pizza }) => {
         <div className={styles.instruction}  >
                <h1 onClick={()=>handleToggle("instructions", !selections.instructions)} >kitchen Instruction(Options) <IoIosArrowDown /></h1>
                {selections.instructions && (
-             <div className={styles.chat}>
+             <div className={`${styles.chat} ${selections.instructions ? styles.expand : styles.collapse}`}>
               <hr />
               <textarea className={styles.textarea} name="" id=""></textarea>
              </div>

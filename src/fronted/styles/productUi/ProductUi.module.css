@@ -168,14 +168,13 @@ hr {
     align-items: center;
     width: 30px;
     height: 30px;
-    right: 10px;
-    bottom: 7px;
+    right: 20px;
+    bottom: -120px;
     position: absolute;
     font-size: 11px;
     background-color: red;
     color: white;
     padding: 6px 3px;
-
     border-radius: 50px;
 }
 

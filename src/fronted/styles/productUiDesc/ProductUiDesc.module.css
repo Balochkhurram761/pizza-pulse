@@ -338,6 +338,17 @@ color: black;
     border: 1px  solid #786;
     margin: 10px 20px;
 }
+.dialong .instruction .chat {
+  overflow: hidden;
+  transition: height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  opacity: 0;
+  height: 0;
+}
+
+.dialong .instruction .expand {
+  height: auto; /* Dynamically adjust height */
+  opacity: 1;
+}
 .dialong .addtocart {
     display: flex;
     justify-content: space-between;
